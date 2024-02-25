@@ -1,4 +1,4 @@
-import { Button, IconButton, Stack, Typography,fontSize,color } from '@mui/material'
+import { Button, Stack, Typography } from '@mui/material'
 import React from 'react'
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 
@@ -87,7 +87,7 @@ export default function HomeDetails() {
       >
      <img
             src="https://img.freepik.com/free-photo/portrait-confident-bearded-man-using-laptop-computer_171337-4255.jpg?w=900&t=st=1708778445~exp=1708779045~hmac=263e80f1cf49ea6c0e20a49e1760af4f4a08182a83eddf17c6aa75d561834ce8"
-            
+            alt='myImage'
             style={{height:"100%",width: '100%' }}
           />
           </Stack>
