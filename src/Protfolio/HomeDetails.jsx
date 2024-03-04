@@ -4,6 +4,7 @@ import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 
 
 
+
 export default function HomeDetails() {
   return (
    <>

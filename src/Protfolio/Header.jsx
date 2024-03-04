@@ -1,6 +1,14 @@
 import React from 'react'
 import { Button, Stack,Box } from '@mui/material'
+import { useNavigate, useLocation } from 'react-router-dom'
+
 const Header = () => {
+
+const navigate = useNavigate()
+const location = useLocation()
+const handleNavigation = (path) =>{
+  navigate(path)
+}
 
   return (
     <>
@@ -43,20 +51,31 @@ const Header = () => {
         <Button
         
         sx={{textTransform:"none",height:"32px",color:"black",}}
+        onClick={()=>handleNavigation("/")}
         >Home</Button>
         <Button
-        sx={{textTransform:"none",height:"32px",color:"black"}}
+        // sx={{textTransform:"none",height:"32px",color:"black"}}
+        sx={{
+          textTransform: 'none',
+          height: '32px',
+          color: location.pathname === '/aboutMe' ? 'white' : 'black',
+          bgcolor: location.pathname === '/aboutMe' ? 'black' : 'transparent',
+        }}
+        onClick={()=>handleNavigation("/aboutMe")}
         // variant='outlined'
         >About Me</Button>
         <Button
+        onClick={()=>handleNavigation("/skills")}
         sx={{textTransform:"none",height:"32px",color:"black"}}
         // variant='outlined'
         >Skills</Button>
         <Button
+        onClick={()=>handleNavigation("/contact")}
         sx={{textTransform:"none",height:"32px",color:"black"}}
         // variant='outlined'
         >Contact</Button>
         <Button
+        onClick={()=>handleNavigation("/resume")}
         sx={{textTransform:"none",height:"32px",width:"90px",color:"white",bgcolor:"black",'&:hover':{backgroundColor:'black'},
       borderRadius:"6px"}}
         

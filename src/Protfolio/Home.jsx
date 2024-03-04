@@ -10,6 +10,7 @@ export default function Home() {
     
     sx={{height:"100vh"}}>
        <Header/>
+       
        <HomeDetails/>
     </Stack>
     </>
